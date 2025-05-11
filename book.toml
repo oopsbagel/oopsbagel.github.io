@@ -1,5 +1,5 @@
 [book]
 authors = ["the rayhunter Authors"]
 language = "en"
-src = "doc/rayhunter/src"
+src = "doc"
 title = "rayhunter Documentation"
