@@ -20,7 +20,7 @@ jobs:
         run: mdbook test doc/rayhunter
 
   mdbook_publish:
-    if: ${{ github.event_name != "pull_request" }}
+    if: ${{ github.event_name != 'pull_request' }}
     permissions:
       pages: write
       contents: write
