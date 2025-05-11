@@ -1,4 +1,4 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [Installation](./installation.md)
 - [Supported Devices](./supported_devices.md)
