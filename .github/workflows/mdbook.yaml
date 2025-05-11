@@ -1,4 +1,4 @@
-# Repository Settings > Pages > Build and deployment
+# On Repository Settings > Pages > Build and deployment
 # Set "Source" to GitHub Actions.
 name: Documentation
 on:
