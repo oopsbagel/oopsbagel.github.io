@@ -21,7 +21,7 @@ jobs:
 
   mdbook_publish:
     if: ${{ github.event_name != 'pull_request' }}
-    depends_on: [mdbook_test]
+    needs: mdbook_test
     permissions:
       pages: write
       contents: write
