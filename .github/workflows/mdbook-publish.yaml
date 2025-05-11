@@ -5,9 +5,6 @@ on:
   push:
     branches: [ "publish-mdbook-live"]
 
-env:
-  MDBOOK_DIR: doc/rayhunter
-
 jobs:
   mdbook_publish:
     permissions:
@@ -23,13 +20,13 @@ jobs:
           cargo install mdbook --no-default-features --features search --vers "^0.4" --locked
 
       - name: Build mdBook
-        run: mdbook build $MDBOOK_DIR
+        run: mdbook build doc/rayhunter
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "$MDBOOK_DIR/book"
+          path: "doc/rayhunter/book"
       - name: Deploy to Github Pages
         uses: actions/deploy-pages@v4
