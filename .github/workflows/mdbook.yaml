@@ -16,8 +16,8 @@ jobs:
       - name: Install mdBook
         run: |
           cargo install mdbook --no-default-features --features search --vers "^0.4" --locked
-      - name: Test mdBook in doc/rayhunter
-        run: mdbook test doc/rayhunter
+      - name: Test mdBook
+        run: mdbook test
 
   mdbook_publish:
     if: ${{ github.event_name != 'pull_request' }}
@@ -35,7 +35,7 @@ jobs:
           cargo install mdbook --no-default-features --features search --vers "^0.4" --locked
 
       - name: Build mdBook
-        run: mdbook build doc/rayhunter
+        run: mdbook build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
